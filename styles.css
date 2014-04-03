@@ -1,0 +1,113 @@
+/*
+ * = RESETS =
+ */
+
+/* clearfix block elements */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    font-size: 1.6rem;
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+/*
+ * = GENERAL =
+ */
+
+h1 {
+    background-color: black;
+    color: white;
+    padding: 4px;
+    margin: 20px 0 0;
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 1.8rem;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    padding: 0 10px;
+}
+
+
+/*
+ * = SITE HEADER =
+ */
+
+.site-header {
+    text-align: center;
+}
+
+.site-header .logo {
+    width: 100%;
+    padding: 10px;
+}
+
+.site-header .contact-info a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding-top: 5px;
+    font-size: 2.4rem;
+}
+
+
+/*
+ * = SITE FOOTER =
+ */
+
+.site-footer .logo {
+    width: 150px;
+}
+
+.site-footer {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.site-footer .contact-info a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+
+/*
+ * = PAGE CONTENT =
+ */
+
+
+/*
+ * = TEMPORARY =
+ */
+
+/*
+.site-header,
+.site-footer,
+.page-content {
+    width: 300px;
+}
+*/
