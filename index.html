@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>DesertStar HVAC</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
@@ -20,31 +21,31 @@
 
 
 
-    <div class="page-content">
+    <div class="page-content page-wrap">
 
-      <section class="banners">
-        <article class="banner">
+      <section class="banners group">
+        <article class="banner active">
           <h1>Excellent Service</h1>
           <img src="img/staff.jpg" alt="Desert Star HVAC Staff" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat urna. Fusce ac purus rutrum libero vulputate laoreet. Duis vulputate purus eu sapien sodales, vel varius arcu fermentum.</p>
+          <p>Our Mission is to provide our customers with the most professional quality of service in their home comfort experiences. We will achieve this one customer at a time, letting each and every family know how much we value them. We thrive on strengthening the family unit, and we believe there is no better place, than in the comfort of your own home.</p>
         </article>
 
         <article class="banner">
           <h1>Beat the Summer Heat</h1>
           <img src="http://i.istockimg.com/file_thumbview_approve/25572542/2/stock-photo-25572542-heatwave-in-the-city-and-hand-showing-thermometer.jpg" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat urna. Fusce ac purus rutrum libero vulputate laoreet. Duis vulputate purus eu sapien sodales, vel varius arcu fermentum.</p>
+          <p>Utah weather, need I say more. In one day we can nearly experience all four seasons. Central air has made it so much easier for this problem. If you still have a swamp cooler let us help you save money on Monthly power bills. Have consistent even air quality throughout the house. Today’s technology has made central air quieter and far more superior to help with your cooling needs.</p>
         </article>
 
         <article class="banner">
           <h1>Kill the Winter Chill</h1>
           <img src="http://i.istockimg.com/file_thumbview_approve/32712688/2/stock-photo-32712688-extreme-winter-ahead-road-warning-sign.jpg" alt="Extreme winter ahead" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat urna. Fusce ac purus rutrum libero vulputate laoreet. Duis vulputate purus eu sapien sodales, vel varius arcu fermentum.</p>
+          <p>Out with the old and in with the new. Yes I said it, the days of old space shuttle furnaces are extinct. Nowadays consumers invest in “Home Comfort.” There are several different options in providing the perfect comfort to your home. With the many options in heating equipment we can tailor a system to improve your home. Technology is at its best with the new efficiency percentage, modulating furnaces, two stages, variable speed blowers and more. We also offer humidifiers and air filtration devices. If you have specific needs just ask or let us know. We’ll do our best to find the right equipment to suit your needs. We offer free estimates. Contact us and a consultant will schedule a date and time convenient for you to evaluate your needs.</p>
         </article>
       </section>
 
 
 
-      <section class="services">
+      <!--<section class="services">
         <article class="service">
           <h1>Heating</h1>
           <img src="http://i.istockimg.com/file_thumbview_approve/919977/2/stock-photo-919977-gas-energy-flames.jpg" alt="Heating" />
@@ -56,7 +57,7 @@
           <img src="http://i.istockimg.com/file_thumbview_approve/20142754/2/stock-photo-20142754-air-conditioner.jpg" alt="Cooling" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed erat urna. Fusce ac purus rutrum libero vulputate laoreet. Duis vulputate purus eu sapien sodales, vel varius arcu fermentum.</p>
         </article>
-      </section>
+      </section>-->
 
     </div>
 
@@ -67,9 +68,17 @@
       <div class="contact-info">
         <a href="tel:8018981448">801-898-1448</a>
         <a href="mailto:info@turnerhvac.com">info@desertstarhvac.com</a>
+        <a href="https://www.facebook.com/desertstarheatingandair">Contact us on Facebook!</a>
       </div>
     </footer>
 
+
+    <script>
+    $(function () {
+      var banners = Banners('.banners');
+      banners.auto(5);  
+    });
+    </script>
 
   </body>
 </html>
