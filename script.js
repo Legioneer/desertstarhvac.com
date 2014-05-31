@@ -8,7 +8,6 @@ function Banners(selector) {
     if (next.length === 0) {
       next = element.children().eq(0);
     }
-    console.log(next.length);
     active.removeClass('active');
     next.addClass('active');
   };
