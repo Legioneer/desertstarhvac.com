@@ -170,6 +170,8 @@ p {
 
 /*= PROMOTIONS =*/
 
+
+
 .promo {
     text-decoration: none;
     color: inherit;
@@ -216,4 +218,17 @@ p {
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
+}
+
+
+
+/*= MEDIA QUERIES =*/
+@media (min-width: 800px ) {
+    /* position .promo on top of .site-header */
+    .promo {
+        position: top;
+        width: 60%;
+        float: right;
+    }
+    /* adjust .site-header layout to make room for .promo */
 }
