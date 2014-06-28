@@ -15,7 +15,8 @@ html {
 
 body {
     font-size: 1.8rem;
-    margin: 0;
+    line-height: 1.2;
+    margin: 0 auto;
 }
 
 * {
@@ -55,8 +56,10 @@ p {
 }
 
 .page-wrap {
-    max-width: 1000px;
+    min-width: 320px;
+    max-width: 1280px;
     margin: 0 auto;
+    position: relative;
 }
 
 
@@ -66,17 +69,21 @@ p {
 
 .site-header {
     text-align: center;
+    position: relative; /* context for positioning contact info and promo */
 }
 
 .site-header .logo {
     width: 100%;
-    padding: 10px;
+    padding: 1.5%;
+
+    /* compensate for yellow slantedness */
+    position: relative;
+    left: 10px;
 }
 
-@media (min-width: 700px) {
-    .site-header .logo {
-        width: 700px;
-    }        
+.site-header .contact-info {
+    width: 300px;
+    margin: 0 auto;
 }
 
 .site-header .contact-info a {
@@ -88,6 +95,58 @@ p {
     padding-top: 5px;
     font-size: 2.4rem;
 }
+
+@media (min-width: 570px) {
+    /* switch .site-header layout */
+    .site-header .contact-info {
+        position: absolute;
+        right: 46%;
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    .site-header .promo {
+        position: absolute;
+        left: 54%;
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    /* create space for elements */
+    .site-header {
+        padding-bottom: 131px;
+    }
+
+    /* cap height on logo */
+    .site-header .logo {
+        max-width: 650px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* switch .site-header layout */
+    .site-header .contact-info {
+        right: auto;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .site-header .promo {
+        left: auto;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .site-header {
+        padding-bottom: 0;
+    }
+
+    .site-header .logo {
+        width: 49%;
+        left: 30px;
+    }
+}
+
 
 
 /*
@@ -191,7 +250,7 @@ p {
     display: block;
     width: 200px;
     margin: 0 auto;
-    overflow: hidden; /* cheap clearfix */
+    position: relative; /* context for promo label */
 }
 
 .promo .price {
@@ -201,6 +260,29 @@ p {
     width: 60%;
     float: left;
     text-align: center;
+    position: relative;
+    z-index: 2;
+    transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    text-shadow: 0 -1px 0 #000, 0 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000;
+    color: #E43A39;
+}
+
+.promo .body:before {
+    content: "";
+    background: url('img/starburst.svg') no-repeat;
+    display: block;
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    left: 5px;
+    top: -6px;
+    overflow: visible;
+    transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    z-index: 1;
 }
 
 .promo .service {
